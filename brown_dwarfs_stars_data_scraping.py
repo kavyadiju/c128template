@@ -10,19 +10,20 @@ import pandas as pd
 url = 'https://en.wikipedia.org/wiki/List_of_brown_dwarfs'
 
 # Get Page
-page = requests.get(url)
+
 
 # Parse Page
-soup = bs(page.text,'html.parser')
+
 
 # Get <table> with class = 'wikitable sortable'
-star_table = soup.find_all('table', { 'class': 'wikitable sortable'})
+
 
 total_table = len(star_table)
 
 
 #create an empty list
-temp_list = []
+
+
 # IMP NOTE: The page at the given URL is maintained by "wikipedia", which might be updated in future.
 # Hence check the index number poperly for star_table[1]
 # Currently, there are there 3 table with class = "class":"wikitable sortable" and "Field brown dwarfs" Table is the 2nd table
